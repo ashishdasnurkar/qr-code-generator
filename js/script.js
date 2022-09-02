@@ -3,6 +3,25 @@ const qr = document.getElementById("qrcode");
 // Button submit
 const onGenerateSubmit = (e) => {
   e.preventDefault();
+  const url = document.getElementById("url").value;
+  const size = document.getElementById("size").value;
+  console.log(url, size);
+  if (url === "") {
+    alert("Please enter a URL");
+  } else {
+  }
+};
+
+// Show spinner
+const showSpinner = () => {
+  const spinner = document.getElementById("spinner");
+  spinner.style.display = "block";
+};
+
+// Hide spinner
+const hideSpinner = () => {
+  const spinner = document.getElementById("spinner");
+  spinner.style.display = "none";
 };
 
 form.addEventListener("submit", onGenerateSubmit);
