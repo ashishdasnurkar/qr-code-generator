@@ -9,6 +9,10 @@ const onGenerateSubmit = (e) => {
   if (url === "") {
     alert("Please enter a URL");
   } else {
+    showSpinner();
+    setTimeout(() => {
+      hideSpinner();
+    }, 1000);
   }
 };
 
