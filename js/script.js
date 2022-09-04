@@ -15,6 +15,14 @@ const onGenerateSubmit = (e) => {
     }, 1000);
   }
 };
+// Generate QR code
+const generateQRCode = (url, size) => {
+  const qrcode = new QRCode("qrcode", {
+    text: url,
+    width: size,
+    height: size,
+  });
+};
 
 // Show spinner
 const showSpinner = () => {
