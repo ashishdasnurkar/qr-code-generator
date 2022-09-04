@@ -12,6 +12,7 @@ const onGenerateSubmit = (e) => {
     showSpinner();
     setTimeout(() => {
       hideSpinner();
+      generateQRCode(url, size);
     }, 1000);
   }
 };
@@ -22,6 +23,15 @@ const generateQRCode = (url, size) => {
     width: size,
     height: size,
   });
+};
+
+// Clear QR code and save button
+const clearUI = () => {
+  qr.innerHTML = "";
+  const saveBtn = document.getElementById("save-link");
+  if (saveBtn) {
+    saveBtn.remove();
+  }
 };
 
 // Show spinner
